@@ -1,0 +1,55 @@
+{
+    "id": "com.porticobenefits.aeexecutive",
+    "name": "AE Executive Summary",
+    "version": "1.0.0",
+    "vendor": "Portico Benefits",
+    "license": "",
+    "eula": "",
+    "description": "Leadership \"at a glance\" view of Annual Enrollment progress: top-line KPIs, Synod/Region completion progress, Health Plan mix, and Year-over-Year comparison. Split off from AE Snap Report on 2026-09-13.",
+    "newInstancePrefix": "AEExecutiveSummary",
+    "icon": "https://bboehm1986.github.io/sac-ae-executive-widget/icon.svg",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-porticobenefits-aeexecutive",
+            "url": "https://bboehm1986.github.io/sac-ae-executive-widget/main.js",
+            "integrity": "sha384-PLACEHOLDER-RECOMPUTE-BEFORE-PUBLISHING"
+        }
+    ],
+    "properties": {
+        "width": {
+            "type": "integer",
+            "default": 900
+        },
+        "height": {
+            "type": "integer",
+            "default": 500
+        },
+        "asOfLabel": {
+            "type": "string",
+            "default": "Live"
+        }
+    },
+    "dataBindings": {
+        "employerStatus": {
+            "feeds": [
+                {
+                    "id": "dimensions",
+                    "description": "Status / Synod-Region / Election Sub-Type / Date / Year — same shape as AE Snap Report's employerStatus binding (both widgets share AM_EMPLOYER_ENROLLMENT_SUMMARY)",
+                    "type": "dimension"
+                },
+                {
+                    "id": "measures",
+                    "description": "Employer Count, Employee Count",
+                    "type": "mainStructureMember"
+                }
+            ]
+        }
+    },
+    "methods": {
+        "refresh": {
+            "description": "Re-renders the dashboard from the currently bound data"
+        }
+    },
+    "events": {}
+}
