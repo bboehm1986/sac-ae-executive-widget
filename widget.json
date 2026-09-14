@@ -1,7 +1,7 @@
 {
     "id": "com.porticobenefits.aeexecutive",
     "name": "AE Employer Election Executive Summary",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "vendor": "Portico Benefits",
     "license": "",
     "eula": "",
@@ -13,7 +13,7 @@
             "kind": "main",
             "tag": "com-porticobenefits-aeexecutive",
             "url": "https://bboehm1986.github.io/sac-ae-executive-widget/main.js",
-            "integrity": "sha384-cMUHv26mWzf9RtQSfHIB+6xTtUZLr30Izd7m9jmy5a4PJAUztmWXRTtBGPz7YXnq"
+            "integrity": "sha384-UGffrufuaTWjmcdDW8/xeADfA9SzhekW8KV7Bfc/82I3EXMxvWXAqoGxSu1Ifbwm"
         }
     ],
     "properties": {
@@ -27,7 +27,7 @@
         },
         "asOfLabel": {
             "type": "string",
-            "default": "Live"
+            "default": ""
         }
     },
     "dataBindings": {
